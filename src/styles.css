@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-image: url('/assets/exchange-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.mat-card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  width: 90%;
+  max-width: 600px;
+  /* Ajusta el ancho máximo de la tarjeta */
+  overflow-x: auto;
+  /* Permite el desplazamiento horizontal si es necesario */
+}
+
+.history-card {
+  max-height: 400px;
+  /* Ajusta la altura máxima de la tarjeta */
+  overflow-y: auto;
+  /* Añade un scrollbar vertical si es necesario */
+}
+
+.mat-elevation-z8 {
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0 3px 4px 0 rgba(0, 0, 0, 0.14),
+    0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+th.mat-header-cell,
+td.mat-cell {
+  padding: 8px 16px;
+  text-align: left;
+}
+
+.table {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.mat-header-cell {
+  font-weight: bold;
+}
+
+.mat-cell {
+  word-break: break-word;
+  /* Permite el ajuste de las palabras largas */
+}
+
+.conversion-result {
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Fondo blanco */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

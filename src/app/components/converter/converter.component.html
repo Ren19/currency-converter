@@ -1,0 +1,23 @@
+<mat-card class="mat-card">
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Monto</mat-label>
+    <input matInput type="number" [(ngModel)]="amount" required>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>De Moneda</mat-label>
+    <mat-select [(ngModel)]="fromCurrency" [disabled]="true">
+      <mat-option value="EUR">EUR</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>A Moneda</mat-label>
+    <mat-select [(ngModel)]="toCurrency" required>
+      <mat-option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="convert()" class="full-width">Convertir</button>
+  <div *ngIf="conversionResult" class="conversion-result alert alert-info mt-3">
+    Resultado: {{ amount }} {{ fromCurrency }} son {{ conversionResult }} {{ toCurrency }}
+  </div>
+  <button mat-raised-button color="accent" (click)="viewHistory()" class="full-width">Ver Historial</button>
+</mat-card>
